@@ -1,6 +1,65 @@
 import { NgModule } from '@angular/core';
-import { NzButtonModule } from 'ng-zorro-antd/button';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzAffixModule } from 'ng-zorro-antd/affix';
+import { NzAlertModule } from 'ng-zorro-antd/alert';
+import { NzAnchorModule } from 'ng-zorro-antd/anchor';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzBackTopModule } from 'ng-zorro-antd/back-top';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzCalendarModule } from 'ng-zorro-antd/calendar';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { NzCascaderModule } from 'ng-zorro-antd/cascader';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzCommentModule } from 'ng-zorro-antd/comment';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
+import { NzEmptyModule } from 'ng-zorro-antd/empty';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzImageModule } from 'ng-zorro-antd/image';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzMentionModule } from 'ng-zorro-antd/mention';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzMessageModule } from 'ng-zorro-antd/message';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzNotificationModule } from 'ng-zorro-antd/notification';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { NzPopoverModule } from 'ng-zorro-antd/popover';
+import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzRateModule } from 'ng-zorro-antd/rate';
+import { NzResizableModule } from 'ng-zorro-antd/resizable';
+import { NzResultModule } from 'ng-zorro-antd/result';
+import { NzSegmentedModule } from 'ng-zorro-antd/segmented';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
+import { NzSliderModule } from 'ng-zorro-antd/slider';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { NzStepsModule } from 'ng-zorro-antd/steps';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzTimelineModule } from 'ng-zorro-antd/timeline';
+import { NzTransferModule } from 'ng-zorro-antd/transfer';
+import { NzTreeModule } from 'ng-zorro-antd/tree';
+import { NzTreeViewModule } from 'ng-zorro-antd/tree-view';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
+import { NzWaterMarkModule } from 'ng-zorro-antd/water-mark';
+
 
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
@@ -20,7 +79,6 @@ import { CdkComponent } from './cdk/cdk.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { CodeEditorComponent } from './code-editor/code-editor.component';
 import { CollapseComponent } from './collapse/collapse.component';
-import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { CommentComponent } from './comment/comment.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { DescriptionsComponent } from './descriptions/descriptions.component';
@@ -29,7 +87,6 @@ import { DrawerComponent } from './drawer/drawer.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { EmptyComponent } from './empty/empty.component';
 import { FormComponent } from './form/form.component';
-import { GraphComponent } from './graph/graph.component';
 import { GridComponent } from './grid/grid.component';
 import { IconComponent } from './icon/icon.component';
 import { ImageComponent } from './image/image.component';
@@ -97,7 +154,6 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     CheckboxComponent,
     CodeEditorComponent,
     CollapseComponent,
-    ColorPickerComponent,
     CommentComponent,
     DatePickerComponent,
     DescriptionsComponent,
@@ -106,7 +162,6 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     DropdownComponent,
     EmptyComponent,
     FormComponent,
-    GraphComponent,
     GridComponent,
     IconComponent,
     ImageComponent,
@@ -156,7 +211,64 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
   ],
   imports: [
     BrowserModule,
-    NzButtonModule
+    NzButtonModule, 
+    NzAffixModule, 
+    NzAlertModule, 
+    NzAnchorModule, 
+    NzAvatarModule, 
+    NzBackTopModule, 
+    NzBadgeModule, 
+    NzCalendarModule, 
+    NzCardModule, 
+    NzCarouselModule, 
+    NzCascaderModule, 
+    NzCheckboxModule, 
+    NzCollapseModule, 
+    NzCommentModule, 
+    NzDatePickerModule, 
+    NzDescriptionsModule, 
+    NzDividerModule, 
+    NzDrawerModule, 
+    NzEmptyModule, 
+    NzFormModule,
+    NzGridModule, 
+    NzIconModule, 
+    NzImageModule, 
+    NzInputModule, 
+    NzInputNumberModule, 
+    NzLayoutModule, 
+    NzListModule, 
+    NzMentionModule, 
+    NzMenuModule, 
+    NzMessageModule, 
+    NzModalModule, 
+    NzNotificationModule, 
+    NzPageHeaderModule, 
+    NzPaginationModule, 
+    NzPopoverModule, 
+    NzProgressModule, 
+    NzRadioModule, 
+    NzRateModule, 
+    NzResizableModule, 
+    NzResultModule, 
+    NzSegmentedModule, 
+    NzSelectModule, 
+    NzSkeletonModule, 
+    NzSliderModule, 
+    NzSpaceModule, 
+    NzSpinModule, 
+    NzStepsModule, 
+    NzSwitchModule, 
+    NzTableModule, 
+    NzTabsModule, 
+    NzTagModule, 
+    NzTimelineModule, 
+    NzTransferModule, 
+    NzTreeModule, 
+    NzTreeViewModule, 
+    NzTypographyModule, 
+    NzUploadModule, 
+    NzWaterMarkModule
   ],
   providers: [],
   bootstrap: [AppComponent]
