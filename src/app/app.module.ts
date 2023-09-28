@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
+
 import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzAnchorModule } from 'ng-zorro-antd/anchor';
@@ -77,7 +82,6 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CascaderComponent } from './cascader/cascader.component';
 import { CdkComponent } from './cdk/cdk.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
-import { CodeEditorComponent } from './code-editor/code-editor.component';
 import { CollapseComponent } from './collapse/collapse.component';
 import { CommentComponent } from './comment/comment.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
@@ -152,7 +156,6 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     CascaderComponent,
     CdkComponent,
     CheckboxComponent,
-    CodeEditorComponent,
     CollapseComponent,
     CommentComponent,
     DatePickerComponent,
@@ -211,13 +214,16 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
   ],
   imports: [
     BrowserModule,
-    NzButtonModule, 
+    FormsModule,
     NzAffixModule, 
     NzAlertModule, 
+    NzAutocompleteModule,
     NzAnchorModule, 
     NzAvatarModule, 
     NzBackTopModule, 
     NzBadgeModule, 
+    NzButtonModule, 
+    NzBreadCrumbModule,
     NzCalendarModule, 
     NzCardModule, 
     NzCarouselModule, 

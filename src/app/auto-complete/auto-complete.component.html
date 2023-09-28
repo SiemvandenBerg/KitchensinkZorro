@@ -1,1 +1,1 @@
-<p>auto-complete works!</p>
+<nz-autocomplete [(ngModel)]="selectedValue" [nzOptions]="options" (nzOnSearch)="onSearch($event.target.value !== null ? $event.target.value as string : '')">
