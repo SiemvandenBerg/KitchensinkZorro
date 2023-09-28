@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./auto-complete.component.css']
 })
 export class AutoCompleteComponent {
-  selectedValue: string = '';
-  options: string[] = ['Option 1', 'Option 2', 'Option 3'];
+  inputValue?: string;
+  options: string[] = [];
 
-  onSearch(value: string): void {
-    // Implement your search logic here
-    console.log(value);
+  onInput(event: Event): void {
+    const value = (event.target as HTMLInputElement).value;
+    this.options = value ? [value, value + value, value + value + value] : [];
   }
 }

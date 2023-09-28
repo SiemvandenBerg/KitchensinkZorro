@@ -24,6 +24,7 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzGridModule } from 'ng-zorro-antd/grid';
@@ -235,6 +236,7 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     NzDescriptionsModule, 
     NzDividerModule, 
     NzDrawerModule, 
+    NzDropDownModule,
     NzEmptyModule, 
     NzFormModule,
     NzGridModule, 

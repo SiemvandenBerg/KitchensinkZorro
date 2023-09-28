@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent {
-
+  afterClose(): void {
+    console.log('close');
+  }
 }

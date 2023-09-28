@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./affix.component.css']
 })
 export class AffixComponent {
+  offsetTop = 10;
+  nzOffsetBottom = 10;
 
+  setOffsetTop(): void {
+    this.offsetTop += 10;
+  }
+
+  setOffsetBottom(): void {
+    this.nzOffsetBottom += 10;
+  }
 }
