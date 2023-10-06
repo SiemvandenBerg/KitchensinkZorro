@@ -1,1 +1,13 @@
 @import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+/* app.component.css */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-container .ant-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
