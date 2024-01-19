@@ -1,1 +1,7 @@
-<p>radio works!</p>
+<nz-radio-group [(ngModel)]="value">
+    <label nz-radio nzValue="A">A</label>
+    <label nz-radio nzValue="B">B</label>
+    <label nz-radio nzValue="C">C</label>
+    <label nz-radio nzValue="D">D</label>
+  </nz-radio-group>
+  <p>Selected Value: {{value}}</p>

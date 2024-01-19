@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./time-picker.component.css']
 })
 export class TimePickerComponent {
-
+  time = new Date();
+  format = 'HH:mm';
 }

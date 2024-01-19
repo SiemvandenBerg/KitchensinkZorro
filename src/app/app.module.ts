@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
+import { NzGraphModule } from 'ng-zorro-antd/graph';
 
 import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
@@ -29,7 +31,6 @@ import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzImageModule } from 'ng-zorro-antd/image';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
@@ -53,6 +54,7 @@ import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { NzStatisticModule } from 'ng-zorro-antd/statistic';
 import { NzStepsModule } from 'ng-zorro-antd/steps';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzTableModule } from 'ng-zorro-antd/table';
@@ -94,7 +96,6 @@ import { EmptyComponent } from './empty/empty.component';
 import { FormComponent } from './form/form.component';
 import { GridComponent } from './grid/grid.component';
 import { IconComponent } from './icon/icon.component';
-import { ImageComponent } from './image/image.component';
 import { InputComponent } from './input/input.component';
 import { InputNumberComponent } from './input-number/input-number.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -109,7 +110,6 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { PopConfirmComponent } from './pop-confirm/pop-confirm.component';
 import { PopoverComponent } from './popover/popover.component';
 import { ProgressComponent } from './progress/progress.component';
-import { QrCodeComponent } from './qr-code/qr-code.component';
 import { RadioComponent } from './radio/radio.component';
 import { RateComponent } from './rate/rate.component';
 import { ResizableComponent } from './resizable/resizable.component';
@@ -136,8 +136,15 @@ import { TreeSelectComponent } from './tree-select/tree-select.component';
 import { TreeViewComponent } from './tree-view/tree-view.component';
 import { TypographyComponent } from './typography/typography.component';
 import { UploadComponent } from './upload/upload.component';
-import { VersionComponent } from './version/version.component';
-import { WaterMarkComponent } from './water-mark/water-mark.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import en from '@angular/common/locales/en';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { IconsProviderModule } from './icons-provider.module';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -168,7 +175,6 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     FormComponent,
     GridComponent,
     IconComponent,
-    ImageComponent,
     InputComponent,
     InputNumberComponent,
     LayoutComponent,
@@ -183,7 +189,6 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     PopConfirmComponent,
     PopoverComponent,
     ProgressComponent,
-    QrCodeComponent,
     RadioComponent,
     RateComponent,
     ResizableComponent,
@@ -197,6 +202,7 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     SpinComponent,
     StatisticsComponent,
     StepsComponent,
+    StatisticsComponent,
     SwitchComponent,
     TableComponent,
     TabsComponent,
@@ -210,12 +216,12 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     TreeViewComponent,
     TypographyComponent,
     UploadComponent,
-    VersionComponent,
-    WaterMarkComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
+    NzGraphModule,
     NzAffixModule, 
     NzAlertModule, 
     NzAutocompleteModule,
@@ -241,7 +247,6 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     NzFormModule,
     NzGridModule, 
     NzIconModule, 
-    NzImageModule, 
     NzInputModule, 
     NzInputNumberModule, 
     NzLayoutModule, 
@@ -266,6 +271,7 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     NzSpaceModule, 
     NzSpinModule, 
     NzStepsModule, 
+    NzStatisticModule,
     NzSwitchModule, 
     NzTableModule, 
     NzTabsModule, 
@@ -276,9 +282,11 @@ import { WaterMarkComponent } from './water-mark/water-mark.component';
     NzTreeViewModule, 
     NzTypographyModule, 
     NzUploadModule, 
-    NzWaterMarkModule
+    NzWaterMarkModule, HttpClientModule, BrowserAnimationsModule, AppRoutingModule, IconsProviderModule
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

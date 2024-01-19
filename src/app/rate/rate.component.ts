@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./rate.component.css']
 })
 export class RateComponent {
-
+  value = 3;
 }

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./input-number.component.css']
 })
 export class InputNumberComponent {
-
+  value: number = 1;
 }

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./checkbox.component.css']
 })
 export class CheckboxComponent {
+  checkboxValue = []; // add this line if it doesn't exist
 
+  onChange(values: any[]) {
+    console.log(values);
+  }
 }

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./segmented.component.css']
 })
 export class SegmentedComponent {
-
+  switchValue = false;
 }

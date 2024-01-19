@@ -1,1 +1,13 @@
-<p>form works!</p>
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label nzFor="email" nzRequired>Email</nz-form-label>
+      <nz-form-control>
+        <input nz-input formControlName="email" id="email" placeholder="Input your email">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button nzType="primary">Submit</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>

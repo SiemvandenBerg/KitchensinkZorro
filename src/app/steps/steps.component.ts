@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./steps.component.css']
 })
 export class StepsComponent {
-
+  current = 0;
 }

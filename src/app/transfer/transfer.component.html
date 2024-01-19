@@ -1,1 +1,6 @@
-<p>transfer works!</p>
+<nz-transfer
+  [nzDataSource]="list"
+  [nzTargetKeys]="targetKeys"
+  (nzSelectChange)="select($event)"
+  (nzChange)="change($event)">
+</nz-transfer>

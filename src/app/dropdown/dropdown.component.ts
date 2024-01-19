@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { OverlayModule } from '@angular/cdk/overlay';
-import { PortalModule } from '@angular/cdk/portal';
 
 @Component({
   selector: 'app-dropdown',
@@ -8,5 +6,6 @@ import { PortalModule } from '@angular/cdk/portal';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent {
-
+  // Add this line
+  isVisible = false;
 }

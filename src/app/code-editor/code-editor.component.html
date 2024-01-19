@@ -1,1 +1,7 @@
-<p>code-editor works!</p>
+<nz-code-editor
+  [(ngModel)]="code"
+  [nzToolkit]="toolkit"
+  [nzLoading]="loading"
+  [nzFullControl]="fullControl"
+  (nzEditorInitialized)="onEditorInitialized($event)">
+</nz-code-editor>

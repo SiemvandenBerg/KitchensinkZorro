@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./pagination.component.css']
 })
 export class PaginationComponent {
-
+  pageIndex = 1;
+  pageSize = 10;
 }

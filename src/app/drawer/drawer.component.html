@@ -1,1 +1,6 @@
-<p>drawer works!</p>
+<button nz-button nzType="primary" (click)="openDrawer()">Open</button>
+<nz-drawer [nzVisible]="visible" nzTitle="Basic Drawer" (nzOnClose)="closeDrawer()">
+  <p>Some contents...</p>
+  <p>Some contents...</p>
+  <p>Some contents...</p>
+</nz-drawer>

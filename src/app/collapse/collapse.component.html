@@ -1,1 +1,5 @@
-<p>collapse works!</p>
+<nz-collapse>
+    <nz-collapse-panel *ngFor="let panel of panels" [nzHeader]="panel.name" [nzActive]="panel.active" [nzDisabled]="panel.disabled">
+      <p>{{panel.name}} content</p>
+    </nz-collapse-panel>
+  </nz-collapse>

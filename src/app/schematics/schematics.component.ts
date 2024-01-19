@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./schematics.component.css']
 })
 export class SchematicsComponent {
-
+  value = 50;
 }

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./empty.component.css']
 })
 export class EmptyComponent {
-
+  notFoundImage = 'path/to/your/image.png'; // replace with your image path
 }

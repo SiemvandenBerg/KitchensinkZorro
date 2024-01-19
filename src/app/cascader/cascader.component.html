@@ -1,3 +1,6 @@
-<nz-cascader [nzOptions]="nzOptions" [(ngModel)]="values" (ngModelChange)="onChanges($event)"></nz-cascader>
-&nbsp;
-<a href="javascript:;" (click)="changeNzOptions()" class="change-options">Change Options</a>
+<nz-cascader [nzOptions]="nzOptions" [(ngModel)]="values" (ngModelChange)="onChanges($event)" nzDropdownMenu nzMenuClassName="custom-dropdown-menu">
+    <ng-template #nzTemplate let-labels="labels" let-selectedOptions="selectedOptions">
+      <span class="custom-label">{{ labels.join(' > ') }}</span>
+      <a href="javascript:;" (click)="changeNzOptions()" class="change-options">Change Options</a>
+    </ng-template>
+  </nz-cascader>

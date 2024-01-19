@@ -13,4 +13,14 @@ export class CalendarComponent {
   panelChange(change: { date: Date; mode: string }): void {
     console.log(change.date, change.mode);
   }
+
+  onDateChange(date: Date): void {
+    console.log('Selected date: ', date);
+    this.date = date;
+  }
+
+  onModeChange(mode: NzCalendarMode): void {
+    console.log('Calendar mode: ', mode);
+    this.mode = mode;
+  }
 }

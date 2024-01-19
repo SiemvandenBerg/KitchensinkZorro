@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./pop-confirm.component.css']
 })
 export class PopConfirmComponent {
+  confirm(): void {
+    console.log('User confirmed deletion');
+  }
 
+  cancel(): void {
+    console.log('User canceled deletion');
+  }
 }

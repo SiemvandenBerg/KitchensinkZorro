@@ -1,8 +1,13 @@
-<nz-card style="width:300px;" nzTitle="Card title" [nzExtra]="extraTemplate">
-    <p>Card content</p>
-    <p>Card content</p>
-    <p>Card content</p>
-  </nz-card>
-  <ng-template #extraTemplate>
-    <a>More</a>
-  </ng-template>
+<nz-card nzHoverable style="width: 240px" [nzCover]="coverTemplate" [nzActions]="[action1, action2, action3]">
+  <nz-card-meta nzTitle="Card title" nzDescription="This is the description">
+    <img nz-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" alt="avatar" />
+  </nz-card-meta>
+</nz-card>
+
+<ng-template #coverTemplate>
+  <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+</ng-template>
+
+<ng-template #action1><i nz-icon nzType="setting"></i></ng-template>
+<ng-template #action2><i nz-icon nzType="edit"></i></ng-template>
+<ng-template #action3><i nz-icon nzType="ellipsis"></i></ng-template>

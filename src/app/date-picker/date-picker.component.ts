@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./date-picker.component.css']
 })
 export class DatePickerComponent {
+  date = null; // initial date
 
+  onChange(date: Date) {
+    console.log(date); // log the new date
+  }
 }

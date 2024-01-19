@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent {
-
+  inputValue: string = '';
 }

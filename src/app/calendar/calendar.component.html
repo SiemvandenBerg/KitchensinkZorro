@@ -1,1 +1,1 @@
-<nz-calendar [(ngModel)]="date" [(nzMode)]="mode" (nzPanelChange)="panelChange($event)"></nz-calendar>
+<nz-calendar [(ngModel)]="date" (nzSelectChange)="onDateChange($event)" (nzModeChange)="onModeChange($event)"></nz-calendar>

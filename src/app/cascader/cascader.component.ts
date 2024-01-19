@@ -1,84 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-
-const options = [
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
-    children: [
-      {
-        value: 'hangzhou',
-        label: 'Hangzhou',
-        children: [
-          {
-            value: 'xihu',
-            label: 'West Lake',
-            isLeaf: true
-          }
-        ]
-      },
-      {
-        value: 'ningbo',
-        label: 'Ningbo',
-        isLeaf: true
-      }
-    ]
-  },
-  {
-    value: 'jiangsu',
-    label: 'Jiangsu',
-    children: [
-      {
-        value: 'nanjing',
-        label: 'Nanjing',
-        children: [
-          {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
-            isLeaf: true
-          }
-        ]
-      }
-    ]
-  }
-];
-
-const otherOptions = [
-  {
-    value: 'fujian',
-    label: 'Fujian',
-    children: [
-      {
-        value: 'xiamen',
-        label: 'Xiamen',
-        children: [
-          {
-            value: 'Kulangsu',
-            label: 'Kulangsu',
-            isLeaf: true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    value: 'guangxi',
-    label: 'Guangxi',
-    children: [
-      {
-        value: 'guilin',
-        label: 'Guilin',
-        children: [
-          {
-            value: 'Lijiang',
-            label: 'Li Jiang River',
-            isLeaf: true
-          }
-        ]
-      }
-    ]
-  }
-];
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-cascader',
@@ -86,24 +6,76 @@ const otherOptions = [
   styleUrls: ['./cascader.component.css']
 })
 export class CascaderComponent {
-  nzOptions: any[] | null = null;
-  values: any[] | null = null;
+  nzOptions = [
+    {
+      value: 'zhejiang',
+      label: 'Zhejiang',
+      children: [
+        {
+          value: 'hangzhou',
+          label: 'Hangzhou',
+          children: [
+            {
+              value: 'xihu',
+              label: 'West Lake'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      value: 'jiangsu',
+      label: 'Jiangsu',
+      children: [
+        {
+          value: 'nanjing',
+          label: 'Nanjing',
+          children: [
+            {
+              value: 'zhonghuamen',
+              label: 'Zhong Hua Men'
+            }
+          ]
+        }
+      ]
+    }
+  ];
+  values: string[] = ['zhejiang', 'hangzhou', 'xihu'];
 
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.nzOptions = options;
-    }, 100);
+  onChanges(values: string[]): void {
+    console.log(values, this.values);
   }
 
   changeNzOptions(): void {
-    if (this.nzOptions === options) {
-      this.nzOptions = otherOptions;
-    } else {
-      this.nzOptions = options;
-    }
+    this.nzOptions = [
+      {
+        value: 'fujian',
+        label: 'Fujian',
+        children: [
+          {
+            value: 'xiamen',
+            label: 'Xiamen',
+            children: [
+              {
+                value: 'gulangyu',
+                label: 'Gulangyu'
+              }
+            ]
+          }
+        ]
+      }
+    ];
   }
 
-  onChanges(values: any): void {
-    console.log(values, this.values);
+  onOptionClick(option: any): void {
+    console.log('Option clicked:', option);
+  }
+
+  onChildClick(child: any): void {
+    console.log('Child clicked:', child);
+  }
+
+  onGrandchildClick(grandchild: any): void {
+    console.log('Grandchild clicked:', grandchild);
   }
 }
